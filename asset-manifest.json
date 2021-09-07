@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Github-Pages-Portfolio/static/css/main.a617e044.chunk.css",
-    "main.js": "/Github-Pages-Portfolio/static/js/main.4ce17189.chunk.js",
-    "main.js.map": "/Github-Pages-Portfolio/static/js/main.4ce17189.chunk.js.map",
+    "main.css": "/Github-Pages-Portfolio/static/css/main.9c4a49da.chunk.css",
+    "main.js": "/Github-Pages-Portfolio/static/js/main.54e23cc3.chunk.js",
+    "main.js.map": "/Github-Pages-Portfolio/static/js/main.54e23cc3.chunk.js.map",
     "runtime-main.js": "/Github-Pages-Portfolio/static/js/runtime-main.8186bfd5.js",
     "runtime-main.js.map": "/Github-Pages-Portfolio/static/js/runtime-main.8186bfd5.js.map",
     "static/js/2.87a999ed.chunk.js": "/Github-Pages-Portfolio/static/js/2.87a999ed.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.8a8ab403.chunk.js": "/Github-Pages-Portfolio/static/js/3.8a8ab403.chunk.js",
     "static/js/3.8a8ab403.chunk.js.map": "/Github-Pages-Portfolio/static/js/3.8a8ab403.chunk.js.map",
     "index.html": "/Github-Pages-Portfolio/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/Github-Pages-Portfolio/static/css/main.a617e044.chunk.css.map",
+    "static/css/main.9c4a49da.chunk.css.map": "/Github-Pages-Portfolio/static/css/main.9c4a49da.chunk.css.map",
     "static/js/2.87a999ed.chunk.js.LICENSE.txt": "/Github-Pages-Portfolio/static/js/2.87a999ed.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/Github-Pages-Portfolio/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8186bfd5.js",
     "static/js/2.87a999ed.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.4ce17189.chunk.js"
+    "static/css/main.9c4a49da.chunk.css",
+    "static/js/main.54e23cc3.chunk.js"
   ]
 }
