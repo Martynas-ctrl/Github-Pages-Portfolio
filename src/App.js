@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './css/Header.css';
 import React, {useState, useEffect} from 'react';
 // import ImgBC from './Images/bc7.jpg';
@@ -32,12 +32,12 @@ import PhpMyAdminIcon from './Images/PhpMyAdmin_icon.png';
 import PhotoshopIcon from './Images/photoshop_icon.png';
 import Portfolio2 from './Images/portfolio2.JPG';
 import Portfolio3 from './Images/portfolio3.JPG';
+import Portfolio100 from './Images/ddd.png';
 
 import test1 from './Images/test41.jpg';
 
 import Typed from 'react-typed';
 
-import Carousel from "./carousel"
 
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -502,7 +502,7 @@ window.addEventListener('scroll', changeBackground);
 
                             <div>
                                 <span className='qualification__rounder'></span>
-                                {/* <span className='qualification__line'></span> */}
+                                {/* <span className='qualification__lineggg'></span> */}
                             </div>
                         </div>
                         
@@ -940,7 +940,7 @@ window.addEventListener('scroll', changeBackground);
                                 <p style={{fontSize: '14px'}}>på företaget</p>
                             </div>
                             <div>
-                                <div className="text" style={{color: '#F9A826'}}>20+</div>
+                                <div className="text" style={{color: '#F9A826'}}>10+</div>
                                 <p style={{fontSize: '14px'}}>Genomförda projekt</p>
                                 <p style={{fontSize: '14px'}}>på yrkeshögskolan</p>
                             </div>
@@ -971,7 +971,7 @@ window.addEventListener('scroll', changeBackground);
             </div>
     </section>
 
-{/* Kanske   boxShadow: 'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px', */} */}
+{/* Kanske   boxShadow: 'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px', */} 
     {/* <section className="services" id="services" style={{backgroundColor: '#fff'}}>
         <div className="max-width">
         <h2 className="title">Mina Erfarenheter</h2>
@@ -1062,6 +1062,7 @@ window.addEventListener('scroll', changeBackground);
             </div>
         </div>
     </section> */}
+      {/* <!-- contact section start --> */}
     {/* <!-- teams section start --> */}
 
     <section className="services" id="reference">
@@ -1088,7 +1089,7 @@ window.addEventListener('scroll', changeBackground);
                     <img id='referenceImg' src={ReferenceImg2} alt=""/>
                         <div className="text">Jonas Sandberg</div>
                         {/* <p>Web Developer and Linux System Administrator at RocketLabs.</p> */}
-                        <p>Webbutvecklare och Linux -systemadministratör på Rocket Labs</p>
+                        <p>Webbutvecklare och Linux systemadministratör på RocketLabs</p>
                         <div style={{marginRight: "200px", marginTop: "20px", display: 'flex'}}>
                           <span style={{color: "#F9A826" , fontSize: '45px', paddingRight: '50px'}} class="material-icons">call</span>
                           <div className="info">

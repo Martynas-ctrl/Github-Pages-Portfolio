@@ -1565,8 +1565,12 @@ footer span a:hover{
 
 @media only screen and (max-width: 400px) {
   .contactImg{
-    max-width: 350px;
+    max-width: 330px;
   }
+  .contact .contact-content .info .sub-title{
+    font-size: 15px;
+  }
+
   .sc-bdfBQB{
     width: 920px!important;
   }
