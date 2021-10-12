@@ -366,12 +366,13 @@ section{
   padding: 0 80px;
   margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .teams, .reference, .contact, footer{
   font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
-.skills .skills-content,
+.skills .skills-content, 
+.reference .ref-content,
 .contact .contact-content{
   display: flex;
   flex-wrap: wrap;
@@ -913,6 +914,60 @@ margin-right: 0;
   background: #F9A826!important;
 }
 
+/* reference section styling */
+.reference, .teams{
+  color:#fff;
+  background: #111;
+}
+.reference .title::before,
+.teams .title::before{
+  background: #fff;
+}
+.reference .title::after,
+.teams .title::after{
+  background: #111;
+  content: "vilka jobbat för";
+}
+.reference .ref-content .card{
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 50px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reference .ref-content .card:hover{
+  background: #F9A826;
+}
+
+.reference .ref-content .card:hover span{
+  color: #fff!important;
+}
+
+
+.reference .ref-content .card .box{
+  transition: all 0.3s ease;
+}
+.reference .ref-content .card:hover .box{
+  transform: scale(1.05);
+}
+.reference .ref-content .card i{
+  font-size: 50px;
+  color: #F9A826;
+  transition: color 0.3s ease;
+}
+.reference .ref-content .card:hover i{
+  color: #fff;
+}
+.reference .ref-content .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+
 /* contact section styling */
 .contact .title::after{
   content: "hör av er";
@@ -1063,6 +1118,11 @@ footer span a:hover{
       width: calc(50% - 10px);
       margin-bottom: 20px;
   }
+
+  .reference .ref-content .card{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
 
   .portfolio .port-content .card,
   .framework .port-content .card
@@ -1379,6 +1439,10 @@ footer span a:hover{
       width: 100%;
   }
 
+  .reference .ref-content .card{
+    width: 100%;
+}
+
   .sc-bdfBQB{
     width: 415px!important;
   }
@@ -1610,7 +1674,18 @@ footer span a:hover{
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
-
-
 }
+
+#portImg{
+  transform: scale(5.5)!important;
+}
+
+.showMoreText{
+  text-align: justify;
+}
+
+.my-anchor-css-class{
+  padding-top: 100px;
+}
+
 /* @media only screen and (max-width: 947px) { */

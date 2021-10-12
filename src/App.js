@@ -1,7 +1,9 @@
 
 import './css/Header.css';
 import React, {useState, useEffect} from 'react';
+import {Helmet} from "react-helmet";
 // import ImgBC from './Images/bc7.jpg';
+import ReactReadMoreReadLess from "react-read-more-read-less";
 import Img from './Images/navbarBackgroundImg.svg';
 import MartynasImg from './Images/martynasImg.jpg';
 import ReferenceImg1 from './Images/Martin.jfif';
@@ -11,10 +13,9 @@ import ProjectsCompleted from './Images/projects_completed.svg';
 import CompaniesWorked from './Images/companies_worked.svg';
 import Contact from './Images/Contact Me.svg';
 import Menu from './Images/menu.svg';
-import PortfolioImg1 from './Images/usersida1.JPG';
 import Portfolio1stats from './Images/portfolio1stats.JPG';
 import { ReactPhotoCollage } from "react-photo-collage";
-
+import ShowMoreText from "react-show-more-text";
 import Portfolio1stats1 from './Images/bc4.jpg';
 import Portfolio1stats2 from './Images/bc1.jpg';
 import Portfolio1stats3 from './Images/bc2.jpg';
@@ -32,8 +33,58 @@ import PhpMyAdminIcon from './Images/PhpMyAdmin_icon.png';
 import PhotoshopIcon from './Images/photoshop_icon.png';
 import Portfolio2 from './Images/portfolio2.JPG';
 import Portfolio3 from './Images/portfolio3.JPG';
-import Portfolio100 from './Images/ddd.png';
+import Portfolio4 from './Images/portfolio4.JPG';
+import PortPort from './Images/portport.JPG';
 
+import LanguagesPort1 from './Images/languages.JPG';
+import LanguagesPort2 from './Images/languages1.JPG';
+import portfolio5 from './Images/portfolio5.JPG';
+import Portfolio6 from './Images/portfolio6.JPG';
+import Portfolio6_2 from './Images/portfolio6_2.JPG';
+
+import WebshopIMG1 from './Images/webshopIMG1.png';
+import WebshopIMG2 from './Images/webshopIMG2.png';
+import WebshopIMG3 from './Images/webshopIMG3.png';
+import WebshopIMG4 from './Images/webshopIMG4.png';
+import WebshopIMG5 from './Images/webshopIMG5.png';
+import MailerIMG from './Images/mailerIMG.JPG';
+import MailerIMG1 from './Images/mailerIMG1.JPG';
+import GameStoreIMG from './Images/gamestoreIMG.JPG';
+import GameStoreIMG1 from './Images/gamestoreIMG1.JPG';
+import GameStoreIMG2 from './Images/gamestoreIMG2.JPG';
+import DietPageIMG from './Images/dietpageIMG.jpg';
+import DietPageMealsIMG from './Images/dietPageMealsImg.JPG';
+import WorkoutPageIMG from './Images/workoutpageIMG.JPG';
+// import WorkoutPageIMG1 from './Images/workoutpageIMG.JPG';
+import UserPageIMG from './Images/userpageIMG.JPG';
+import NutritionFactPageIMG from './Images/nutritionfactpageIMG.JPG';
+
+import DividendIMG1 from './Images/dividendIMG1.JPG';
+import DividendIMG2 from './Images/dividendIMG2.gif';
+import DividendIMG3 from './Images/dividendIMG3.JPG';
+import DividendIMG4 from './Images/dividendIMG4.JPG';
+import FourConnectStats1 from './Images/4connectStats1.JPG';
+import FourConnectStats from './Images/4connectStats.JPG';
+import FourConnectStats2 from './Images/4connectStats2.JPG';
+import FourConnectStats3 from './Images/4connectStats3.JPG';
+import TicTacToeStats from './Images/tictactoeStats.JPG';
+import TicTacToeStats1 from './Images/tictactoeStats1.JPG';
+import TicTacToeStats2 from './Images/tictactoeStats2.JPG';
+import QuizGameStats from './Images/QuizStats.JPG';
+import DogStationStats from './Images/dogStationStats.JPG';
+import GameStoreStats from './Images/gameStoreStats.JPG';
+import WorkoutAndNutritionStats from './Images/workoutandnutritionStats.JPG';
+import TrelloStats from './Images/trelloStats.JPG';
+
+import GIF from './Images/Animation1.gif';
+import GIF1 from './Images/testtest.gif';
+import GIF2 from './Images/Animation3.gif';
+import ConnectFourGIF from './Images/connectFourGIF.gif';
+import GameStoreGIF from './Images/gameStoreGIF.gif';
+import TrelloGIF from './Images/trelloGIF.gif';
+
+
+import GIF6 from './Images/quizGIF.gif';
 import test1 from './Images/test41.jpg';
 
 import Typed from 'react-typed';
@@ -44,20 +95,159 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 
-const setting = {
+
+// const setting = {
+//     width: '440px',
+//     height: ['250px', '170px'],
+//     border: '1px solid #F9A826',
+//     layout: [1, 4],
+//     photos: [
+//       { source: Portfolio1stats1 },
+//       { source: Portfolio1stats2 },
+//       { source: Portfolio1stats3 },
+//       { source: Portfolio1stats4 },
+//     ],
+//     showNumOfRemainingPhotos: true
+//   };
+
+  const setting = {
     width: '440px',
     height: ['250px', '170px'],
     border: '1px solid #F9A826',
-    layout: [1, 4],
+    layout: [1],
     photos: [
-      { source: Portfolio1stats1 },
-      { source: Portfolio1stats2 },
-      { source: Portfolio1stats3 },
-      { source: Portfolio1stats4 },
+      { source: GIF2 },
     ],
     showNumOfRemainingPhotos: true
   };
 
+  const setting2 = {
+    width: '440px',
+    height: ['250px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1, 1],
+    photos: [
+      { source: Portfolio6 },
+      { source: Portfolio6_2 },
+    //   { source: Portfolio1stats3 },
+    //   { source: Portfolio1stats4 },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting3 = {
+    width: '440px',
+    height: ['250px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1, 3],
+    photos: [
+      { source: WebshopIMG5 },
+      { source: WebshopIMG2 },
+      { source: WebshopIMG4 },
+      { source: WebshopIMG1 },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting4 = {
+    width: '445px',
+    height: ['250px'],
+    border: '1px solid #F9A826',
+    layout: [1, 1],
+    photos: [
+      { source: MailerIMG },
+      { source: MailerIMG1 },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting5 = {
+    width: '440px',
+    height: ['440px'],
+    border: '1px solid #F9A826',
+    layout: [1],
+    photos: [
+      { source: GameStoreGIF },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting6 = {
+    width: '445px',
+    height: ['250px'],
+    border: '1px solid #F9A826',
+    layout: [1, 1],
+    photos: [
+      { source: UserPageIMG },
+      { source: DietPageIMG },
+      { source: DietPageMealsIMG },
+      { source: WorkoutPageIMG },
+      { source: NutritionFactPageIMG },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting7 = {
+    width: '445px',
+    height: ['250px'],
+    border: '1px solid #F9A826',
+    layout: [1, 1],
+    photos: [
+      { source: DividendIMG1 },
+      { source: DividendIMG2 },
+      { source: DividendIMG4 },
+      { source: DividendIMG3 },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting8 = {
+    width: '440px',
+    height: ['440px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1],
+    photos: [
+      { source: ConnectFourGIF },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting9 = {
+    width: '440px',
+    height: ['440px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1],
+    photos: [
+      { source: GIF },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting10 = {
+    width: '440px',
+    height: ['440px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1],
+    photos: [
+      { source: GIF6 },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+
+  const setting11 = {
+    width: '440px',
+    height: ['440px', '170px'],
+    border: '1px solid #F9A826',
+    layout: [1],
+    photos: [
+      { source: TrelloGIF },
+    ],
+    showNumOfRemainingPhotos: true
+  };
+  
+  
+  const myLongText =
+  "Som vårt första projekt på RocketLabs fick vi utveckla en programvara för massmailutskick.Arbetet utförs genom utveckling av en programvara för massmailutskick som använder ramverket Vue som frontend. Jag skulle bygga en front-end för back-end till mailer projektet som företaget skulle vidareutveckla och använda sig av för massutskick via e-post och för att kunna föra statistik på vilken sorts e-post som fick e-postanvändare att öppna mest.Detta skulle jag åstadkomma genom att bygga a/b tester där man kunde skicka två olika e-post till e-postanvändare.De 2 olika e-post som skickas via a/b tester har samma budskap till exempel reklam om företagets nya produkt men innehållet skiljer sig åt exempelvis den ena e-post som skickas till kunden kan innehålla ett annat typsnitt och vara mer personlig.När en kund öppnar e-post så sparas den i databasen och på så sätt kan företaget lista ut vilken sorts e-post en kund föredrar och när kunden brukar oftast att öppna sina e-post för att avgöra vilken tid är bästa för massmailutskick.Deras önskemål var också att implementera en webbsida för att kunna skicka ett meddelande via e-post till en kund och en webbsida för att kunna se alla meddelanden som man har skickat samt vilka e-post som kunden har öppnat.Deras önskemål var också att implementera en webbsida för att kunna skicka ett meddelande via e-post till en kund och en webbsida för att kunna se alla meddelanden som man har skickat samt vilka e-post som kunden har öppnat. En webbsida med lista av alla domäner för ett e-post skulle också skapas och i den ska man kunna skapa, ta bort samt se information för en specifik domän.En webbsida där man ska kunna lägga till taggar, skapa och ta bort listor för olika domäner man har samt en webbsida för e-postlista i vilken man ska kunna lägga till namn, e-post och taggar för att på ett snabbare sätt skicka ut massmail också skulle läggas till.Header och navbar skulle också implementeras tillsammans med import av excel sheet.Dashboard som skulle vara en startsida och innehålla generell statistik samt registrering, inloggning och inställningar för att ändra lösenord och email också skulle implementeras.Hela projektet skulle genomföras i Vue.js";
   const test = {
     responsive:{
         0:{
@@ -94,9 +284,19 @@ const changeBackground = () => {
 
 window.addEventListener('scroll', changeBackground);
 
+
+// executeOnClick = (isExpanded) => {
+//     console.log(isExpanded);
+// }
+
   return (
     <div>
       <header className="l-header">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Portfolio</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
     
 
      {/* <!-- navbar section start --> */}
@@ -175,7 +375,7 @@ window.addEventListener('scroll', changeBackground);
                         {/* <p>
                             Jag behöver ett jobb för att kunna utveckla mina nuvarande kunskaper till nästa nivå men även
                             också för att få en större bild på hur arbetslivet inom programmering fungerar och ser ut.</p><br/> */}
-                        <p>Jag är en person som trivs både att arbeta i grupp och ensam både på plats eller på distans samt bryr mig mycket vad andra tycker
+                        <p>Jag är en person som trivs både att arbeta i grupp och ensam både på plats eller på distans samt bryr mig mycket om vad andra tycker
                            om mig och därför försöker jag att göra mitt bästa att få så bra bild om mig som möjligt. Jag ser fram
                            emot att arbeta med er och hjälpa er så gott jag bara kan med min ultimata arbetsinsats.
                         </p>
@@ -237,6 +437,7 @@ window.addEventListener('scroll', changeBackground);
                             <li>Examensarbete, 40 YH-poäng</li>
                             <li>LIA 2, Webbutveckling , 60 YH-poäng</li>
                         </ul>
+                        <a href="https://github.com/Martynas-ctrl" target="_blank">Se Github</a>
                     {/* <a href="#">Läs mer</a> */}
                 </div>
                 <div className="column right">
@@ -526,385 +727,240 @@ window.addEventListener('scroll', changeBackground);
 <section className="about" id="portfolio" style={{backgroundColor: '#111', color: '#fff'}}>
             <div className="max-width">
                 <h2 className="title">Min portfolio</h2>
-                <OwlCarousel className="owl-theme" items={1} loop margin={50} autoplay >
+                <OwlCarousel className="owl-theme" items={1} margin={50} autoplayHoverPause autoplay >
+    
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting8} className='photoCOllageImg' id='portImg'/>
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>4 i rad</h2>
+                        <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                            Arbetet utförs genom utveckling av en react applikation för att skapa det klassiska spelet 4 i rad.
+                            Spelet går ut på att varannan gång lägger deltagarna en bricka i spelet. Den som först får fyra av sina brickor i rad (vågrätt, lodrätt eller diagonalt) vinner.
+                            Eftersom brickor hela tiden tillförs samtidigt som ytan är begränsad slutar spelet oavgjort när det inte längre finns plats för fler brickor. 
+                        </p>
+                        <div style={{marginTop: '15px'}}>
+                            <img src={FourConnectStats3} alt=""  style={{width: '200px'}}/>
+                        </div>
+                        {/* <div style={{marginTop: '30px'}}>
+                            <img src={FourConnectStats} alt=""  style={{width: '300px'}}/>
+                        </div> */}
+                        <a className='seeMoreBtn' href="https://trusting-hoover-2121cd.netlify.app"  target="_blank">Se demo</a>
+                    </div>
+                </div>
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting9} className='photoCOllageImg' id='portImg'/>
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>3 i rad</h2>
+                        <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                            Arbetet utförs med vanilla javascript för att skapa ett spel där användaren kan spela spelet 3 i rad(Tic Tac Toe).
+                            Spelet går ut på att två spelare som ska turas om att lägga djävul (😈) resp. ängel (😇) på ett (3x3) rutnät. 
+                            Spelaren som först får tre i rad vinner. Programmet läser in vilken ruta man vill placera sitt tecken på och lägger därefter spelarens markör på rutan.
+                            Vinnaren får sedan meddelandet efter spelets slut om om man har vunnit eller förlorat. Möjligheten för att återställa, starta om eller stänga av spelet finns också.
+                        </p>
+                       
+                        <div style={{marginTop: '15px'}}>
+                        <img src={TicTacToeStats2} alt=""  style={{width: '200px'}}/>
+                        </div>
+                        <a className='seeMoreBtn' href="https://dreamy-roentgen-6992cb.netlify.app"  target="_blank">Se demo</a>
+                    </div>
+                </div>
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting10} className='photoCOllageImg' id='portImg'/>
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>SpelQuiz</h2>
+                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                                Arbetet utförs genom utveckling av en react app för att skapa det klassiska spelet 4 i rad.
+                                Spelet går ut på att varannan gång lägger deltagarna en bricka i spelet. Den som först får fyra av sina brickor i rad (vågrätt, lodrätt eller diagonalt) vinner.
+                                Eftersom brickor hela tiden tillförs samtidigt som ytan är begränsad slutar spelet oavgjort när det inte längre finns plats för fler brickor. 
+                            </p>
+                            <div style={{marginTop: '15px'}}>
+                                <img src={QuizGameStats} alt=""  style={{width: '200px'}}/>
+                            </div>
+                            <a className='seeMoreBtn' href="https://practical-wozniak-a4c7ae.netlify.app"  target="_blank">Se demo</a>
+                    </div>
+                </div>
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting5} className='photoCOllageImg' id='portImg'/>
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>Spelbutik</h2>
+                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
+                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
+                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
+                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
+                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
+                                uppdaterar och tar bort.
+                                Jag har skapad en applikation som jag kallar för game store, det är en spelbutik demo för
+                                spelförsäljning som blocket och hela projektet går ut på att då hantera data i, från och till
+                                frontend med hjälp av ett headless graphCMS och det genomför jag via implementation
+                                av lägga till/skapa, uppdatera och ta bort funktioner.
+                            </p>
+                            
+                            <div style={{marginTop: '15px'}}>
+                                <img src={GameStoreStats} alt=""  style={{width: '200px'}}/>
+                            </div>
+                           
+                            <a className='seeMoreBtn' href="https://gallant-goldberg-eca837.netlify.app/"  target="_blank">Se demo</a>
+                    </div>
+                </div>
+
                 <div className="about-content">
                     <div className="column left">
                        <ReactPhotoCollage {...setting} className='photoCOllageImg' id='portImg'/>
+                        {/* <img src={GIF2} alt="" /> */}
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>Bibliotek för hundraser</h2>
+                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                                Arbetet utförs med vanilla javascript för att visa slumpmässiga bilder för alla hundraser eller en specifik hundrad med hjälp av en REST API.</p>
+                                {/* <p>
+                                genom praktiskt arbete och utveckling av en statisk hemsida som använder 
+                                vanilla javascript och REST API för att visa slumpmässiga bilder för alla hundraser eller en specifik hundras.</p> */}
+                            <div style={{marginTop: '15px'}}>
+                                <img src={DogStationStats} alt=""  style={{width: '200px'}}/>
+                            </div>
+                            <a className='seeMoreBtn' href="https://cranky-chandrasekhar-95fec7.netlify.app"  target="_blank">Se demo</a>
+                    </div>
+                </div>
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting11} className='photoCOllageImg' id='portImg'/>
                         {/* <img src={Portfolio1stats} alt="" /> */}
                     </div>
                     <div className="column right">
-                    <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
+                    <h2 className="text" style={{color: "#F9A826"}}>Trello</h2>
                             <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
+                                Arbetet utförs genom utveckling av en fullstack webbapplikation som använder 
+                                ramverket React som frontend och Express, en webb- och applikationsserver för Node.js för att köra backend.
+                                Det är en applikation som kallas för Trello som är ett visuellt verktyg för arbetshantering som hjälper användaren att organisera, 
+                                planera och hantera sitt arbete på ett produktivt och organiserat sätt så att man kan se vad man arbetar med och var i processen man är.
                             </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
+                            <div style={{marginTop: '15px'}}>
+                                <img src={TrelloStats} alt=""  style={{width: '200px'}}/>
                             </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
+                            <a className='seeMoreBtn' href="https://github.com/Martynas-ctrl/mandatory-backend2"  target="_blank">Se kod</a>
                     </div>
                 </div>
+
                 <div className="about-content">
                     <div className="column left">
-                       {/* <ReactPhotoCollage {...setting} className='photoCOllageImg' id='portImg'/> */}
-                        <img src={Portfolio3} alt="" />
+                       <ReactPhotoCollage {...setting6} className='photoCOllageImg' id='portImg'/>
+                        {/* <img src={Portfolio1stats} alt="" /> */}
                     </div>
                     <div className="column right">
-                    <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
+                    <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostapplikation</h2>
                             <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
+                                Applikationen som jag utvecklade kallar jag för HealtyLifeStyle. Det är ett projekt 
+                                som utvecklades i några veckor för att bygga en komplett React JS applikation tillsammans 
+                                med ett headless CMS som backend med stöd att erbjuda användaren ett användargränssnitt 
+                                med mängd olika funktioner. I applikationen kan användaren skapa eget träningsschema och 
+                                kostschema enligt applikationens uträkning av rekommenderad daglig kalori och 
+                                näringsbehov beroende på användares ålder, längd, vikt, kön och mål. Detta åstadkommer 
+                                man med olika matematiska formler för att göra dessa uträckningar. Applikation visar också 
+                                användarens kalori- och näringsintag för varje måltid i form av olika grafer samt 
+                                träningsupplägg för varje dag där även 1RM beräknas så att användaren kan ha koll och 
+                                kontroll över sin träning och kost för att lyckas med en hälsosam livsstil. För datahämtning 
+                                och datamodifiering används i applikationen Apollo Client till graphQL API för att nyttja full 
+                                CRUD och cache så att användaren kan hämta, skapa, uppdatera och ta bort sina
+                                träningsövningar från träningsschemat eller livsmedel från sitt kostschema samtidigt som 
+                                användargränssnittet för användaren uppdateras automatisk
                             </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
+                            <div style={{marginTop: '15px'}}>
+                                <img src={WorkoutAndNutritionStats} alt=""  style={{width: '200px'}}/>
                             </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
+                            <a className='seeMoreBtn' href="https://github.com/Martynas-ctrl/HealthyLifeStyle"  target="_blank">Se kod</a>
                     </div>
                 </div>
+               
                 <div className="about-content">
                     <div className="column left">
-                       {/* <ReactPhotoCollage {...setting} className='photoCOllageImg' id='portImg'/> */}
-                        <img src={Portfolio2} alt="" />
+                       <ReactPhotoCollage {...setting3} className='photoCOllageImg' id='portImg'/>
                     </div>
                     <div className="column right">
-                    <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
+                    <h2 className="text" style={{color: "#F9A826"}}>Webshop Valtab</h2>
                             <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
+                                Arbetet utförs med pagebuilder, ett traditional CMS som RocketLabs själva har utvecklat.
+                                Jag skulle återbygga kundens hemsida från scratch med vissa ändringar på sidan men även extra saker som skulle läggas till. 
+                                Hemsidan heter Valtab som säljer olika matkassar.
+                                Deras önskemål var att layout på shoppen som skulle läggas till ska vara i likhet med en annan hemsida som heter Etnomat för produktkatalog och produktsida men färgval skulle fortfarande stämma överens med den nuvarande sidan Valtab. 
+                                Alla övriga sidor skulle se ut på samma vis som på den nuvarande hemsidan Valtab med några mindre justeringar för det som låg från början under matkassar eftersom det skulle ändras till att bli recept och priser skulle inte längre finnas med. 
+                                Matkassar skulle även flyttas in i blog-verktyget som skulle ligga till grund för receptboken på sidan. 
                             </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
-                            </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
+                            <a className='seeMoreBtn' href="https://valtab.se/"  target="_blank">Besök hemsidan</a>
+                    </div>
+                </div>               
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting4} className='photoCOllageImg' id='portImg'/>
+                        {/* <img src={WebshopIMG} alt="" /> */}
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>Mailer</h2>
+                        <ShowMoreText
+                            /* Default options */
+                            lines={1}
+                            more="Läs mer"
+                            less="Läs mindre"
+                            className="showMoreText"
+                            anchorClass="my-anchor-css-class"
+                            expanded={false}
+                            width={5000}
+                            truncatedEndingComponent={"... "}
+                            >
+                                
+                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                                Som vårt första projekt på RocketLabs fick vi utveckla en programvara för massmailutskick. 
+                                Arbetet utförs genom utveckling av en programvara för massmailutskick som använder ramverket Vue som frontend.
+                                Jag skulle bygga en front-end för back-end till mailer projektet som företaget skulle vidareutveckla och använda sig av för massutskick via e-post och för att kunna föra statistik på vilken sorts e-post som fick e-postanvändare att öppna mest. 
+                                Detta skulle jag åstadkomma genom att bygga a/b tester där man kunde skicka två olika e-post till e-postanvändare. 
+                                De 2 olika e-post som skickas via a/b tester har samma budskap till exempel reklam om företagets nya produkt men innehållet skiljer sig åt exempelvis den ena e-post som skickas till kunden kan innehålla ett annat typsnitt och vara mer personlig. 
+                                När en kund öppnar e-post så sparas den i databasen och på så sätt kan företaget lista ut vilken sorts e-post en kund föredrar och när kunden brukar oftast att öppna sina e-post för att avgöra vilken tid är bästa för massmailutskick. 
+                                Deras önskemål var också att implementera en webbsida för att kunna skicka ett meddelande via e-post till en kund och en webbsida för att kunna se alla meddelanden som man har skickat samt vilka e-post som kunden har öppnat.
+                                En webbsida med lista av alla domäner för ett e-post skulle också skapas och i den ska man kunna skapa, ta bort samt se information för en specifik domän.
+                                En webbsida där man ska kunna lägga till taggar, skapa och ta bort listor för olika domäner man har samt en webbsida för e-postlista i vilken man ska kunna lägga till namn, e-post och taggar för att på ett snabbare sätt skicka ut massmail också skulle läggas till. 
+                                Header och navbar skulle också implementeras tillsammans med import av excel sheet. 
+                                Dashboard som skulle vara en startsida och innehålla generell statistik samt registrering, inloggning och inställningar för att ändra lösenord och email också skulle implementeras.  
+                                Hela projektet skulle genomföras i Vue.js.
+                            </p>
+                            </ShowMoreText>
                     </div>
                 </div>
+
+                <div className="about-content">
+                    <div className="column left">
+                       <ReactPhotoCollage {...setting7} className='photoCOllageImg' id='portImg'/>
+                    </div>
+                    <div className="column right">
+                    <h2 className="text" style={{color: "#F9A826"}}>Aktieportfölj</h2>
+                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
+                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
+                                ramverket React som frontend och ett headless GraphCMS som backend 
+                                På RocketLabs fick vi vidareutveckla aktieprojektet, en programvara för aktieutdelning som RocketLabs har utvecklat i ett år. 
+                                Vi skulle lägga till många olika funktionaliteter som de ville ha som bestod både av frontend och backend. 
+                                Aktieprojektet var ett externt projekt från början som såldes till en kund efter kundens behov men sedan blev ett internt projekt för en av våra handledare som han ska vidareutveckla efter vår LIA och sedan ska bli en preminarrationstjänst som ska användas av Martin Forsen och hans kunder. 
+                                Denna programvara ska hantera aktieutdelning där kunden kan köpa och sälja aktier för att tjäna pengar. 
+                                Detta skulle vi åstadkomma genom att bygga ett användargränssnitt som visar statistik och tabeller om olika innehav, affärssektorer, transaktioner, utdelning, bevakningslistor och mycket mer.
+                                Projektet skulle genomföras i Vue.js och laravel.
+                            </p>
+                    </div>
+                </div>
+                
                 </OwlCarousel>
             </div>
         </section>
-
-
-    {/* <section className="portfolio" id="portfolio">
-        <div className="max-width">
-            <h2 className="title">Min portfolio</h2>
-            <div className="port-content">
-            <OwlCarousel className="owl-theme" items={1} loop margin={10} autoplay >
-                      <div className='portfolio_container'>
-                        <div className="column left" style={{marginRight: '30px'}}>
-                               
-                            <ReactPhotoCollage {...setting} className='photoCOllageImg' />
-                        </div>
-                        <div id='portfolio_content' className="column right" >
-                            <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
-                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
-                            </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
-                            </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
-                        </div>
-                       </div>
-
-                       <div className='portfolio_container'>
-                        <div className="column left" style={{marginRight: '30px'}}>
-                                
-                            <ReactPhotoCollage {...setting} className='photoCOllageImg' />
-                        </div>
-                        <div id='portfolio_content' className="column right" >
-                            <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
-                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
-                            </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
-                            </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
-                        </div>
-                       </div>
-
-                       <div className='portfolio_container'>
-                        <div className="column left" style={{marginRight: '30px'}}>
-                                  
-                            <ReactPhotoCollage {...setting} className='photoCOllageImg' />
-                        </div>
-                        <div id='portfolio_content' className="column right" >
-                            <h2 className="text" style={{color: "#F9A826"}}>Tränings och -kostApplikation</h2>
-                            <p id='portfolio_content_text' style={{fontSize: '15px', textAlign: 'justify'}}>
-                                Arbetet utförs genom praktiskt arbete och utveckling av en webbapplikation som använder 
-                                ramverket React som frontend och ett headless GraphCMS som backend som är helt byggt 
-                                som API fokuserat från grunden, vilket gör det möjligt för utvecklaren att definiera 
-                                strukturer, behörigheter och relationer för API parametrarna. Applikationen kopplar upp sig 
-                                via GraphQL API från Apollo Client på användarens data som användaren skapar, hämtar, 
-                                uppdaterar och tar bort.
-                                Projektet använder bootstrap för styling och koden valideras via Prettier ESLint
-                            </p>
-                            <div style={{marginTop: '30px'}}>
-                                <img src={Portfolio1stats} alt=""  style={{width: '400px'}}/>
-                            </div>
-                            <a className='seeMoreBtn' href="Martynas_Majaras_CV.pdf">Se kod</a>
-                        </div>
-                       </div>
-
-                </OwlCarousel>
-                </div>
-            </div>   
-        </section> */}
-        
-        {/* test intresse här såsom basket , gym osv*/}
-
-
-        {/* <section className="services" id="services" style={{backgroundColor: '#fff'}}>
-        <div className="max-width">
-        <h2 className="title">Mina Erfarenheter</h2>
-            <div className="serv-content">
-                <div className="card" style={{backgroundColor: '#fff', boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px', color: '#222'}}>
-                    <div className="box">
-                    <img src={Img} alt="" style={{width: '200px', height: '200px'}} />
-                        <div className="text">0</div>
-                        <p>Års erfarenhet</p>
-                    </div>
-                </div>
-                <div className="card" style={{backgroundColor: '#fff', boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px', color: '#222'}}>
-                    <div id='iconHover' className="box">
-                    <img src={CompaniesWorked} alt="" style={{width: '200px', height: '200px'}} />
-                        <div className="text">2</div>
-                        <p>Genomförda projekt på företaget</p>
-                       
-                    </div>
-                </div>
-                <div className="card" style={{backgroundColor: '#fff', boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px', color: '#222'}}>
-                    <div className="box">
-                    <img src={ProjectsCompleted} alt="" style={{width: '200px', height: '200px'}} />
-                        <div className="text">0</div>
-                        <p>Företag som jag har jobbat på</p>
-                       
-                    </div>
-                </div>
-               </div>
-            </div>
-    </section> */}
-
-    {/* <section className="services" id="experience" style={{backgroundColor: 'whitesmoke'}}>
-        <div className="max-width">
-        <h2 className="title" style={{color: '#222'}}>Mina Erfarenheter</h2>
-            <div className="serv-content" style={{color: '#fff!important'}}>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff', boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px', color: '#222'}}>
-                    <div className="box">
-                    <img src={Img} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>Arbetslivserfarenhet</p>
-                            </div>
-                            <div >
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>yrkesutbildning</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff',  boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px', color: '#222'}}>
-                    <div className="box">
-                        <img src={CompaniesWorked} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '14px', textShadow:' 2px 2px 4px #F9A826'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px', textShadow:' 2px 2px 4px #F9A826'}}>på företaget</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>20+</div>
-                                <p style={{fontSize: '14px', textShadow:' 2px 2px 4px #F9A826'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px', textShadow:' 2px 2px 4px #F9A826'}}>på yrkeshögskolan</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff',  boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px', color: '#222'}}>
-                    <div className="box">
-                        <img src={ProjectsCompleted} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har jobbat på</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har haft LIA på</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-               </div>
-            </div>
-    </section> */}
-
-    {/* <section className="services" id="experience" style={{backgroundColor: '#fff'}}>
-        <div className="max-width">
-        <h2 className="title" style={{color: '#222'}}>Mina Erfarenheter</h2>
-            <div className="serv-content" style={{color: '#fff!important'}}>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff', boxShadow: '#F9A826 0px -50px 36px -28px inset', color: '#222'}}>
-                    <div className="box">
-                    <img src={Img} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>Arbetslivserfarenhet</p>
-                            </div>
-                            <div >
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>yrkesutbildning</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff',  boxShadow: '#F9A826 0px -50px 36px -28px inset', color: '#222'}}>
-                    <div className="box">
-                        <img src={CompaniesWorked} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '14px'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px'}}>på företaget</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>20+</div>
-                                <p style={{fontSize: '14px'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px'}}>på yrkeshögskolan</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: '#fff',  boxShadow: '#F9A826 0px -50px 36px -28px inset', color: '#222'}}>
-                    <div className="box">
-                        <img src={ProjectsCompleted} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har jobbat på</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har haft LIA på</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-               </div>
-            </div>
-    </section> */}
-
-{/* <section className="services" id="experience" style={{backgroundColor: '#fff'}}>
-        <div className="max-width">
-        <h2 className="title" style={{color: '#222'}}>Mina Erfarenheter</h2>
-            <div className="serv-content" style={{color: '#fff!important'}}>
-                <div className="card" id='iconHover' style={{backgroundColor: 'ghostwhite', color: '#222', color: '#222'}}>
-                    <div className="box">
-                    <img src={Img} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>Arbetslivserfarenhet</p>
-                            </div>
-                            <div >
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Års</p>
-                                <p style={{fontSize: '15px'}}>yrkesutbildning</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: 'ghostwhite', color: '#222'}}>
-                    <div className="box">
-                        <img src={CompaniesWorked} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '14px'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px'}}>på företaget</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>20+</div>
-                                <p style={{fontSize: '14px'}}>Genomförda projekt</p>
-                                <p style={{fontSize: '14px'}}>på yrkeshögskolan</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className="card" id='iconHover' style={{backgroundColor: 'ghostwhite', color: '#222', color: '#222'}}>
-                    <div className="box">
-                        <img src={ProjectsCompleted} alt="" style={{width: '200px', height: '200px'}} />
-
-                        <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>0</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har jobbat på</p>
-                            </div>
-                            <div>
-                                <div className="text" style={{color: '#F9A826'}}>2</div>
-                                <p style={{fontSize: '15px'}}>Företag som</p>
-                                <p style={{fontSize: '15px'}}>jag har haft LIA på</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-               </div>
-            </div>
-    </section> */}
 
     <section className="services" id="experience" style={{backgroundColor: '#fff'}}>
         <div className="max-width">
@@ -970,6 +1026,47 @@ window.addEventListener('scroll', changeBackground);
                </div>
             </div>
     </section>
+
+
+  
+ 
+   
+  
+  
+   
+   
+    
+  
+                            {/* <li>JavaScript, 40 YH-poäng</li>
+                                1.Tic Tac Toe gif V
+                                2.Hundar Gif V
+
+                            <li>Avancerad JavaScript med ReactJS, 60 YH-poäng</li>
+                                3. 4 rad netlify V
+                                4. Register collage
+                                5. Todo List Collage
+                                6. Movies Collage
+                                7. Kanske dropbox
+
+                            <li>UX‑design, 15 YH-poäng</li>
+                                8.UX2 Netlify V
+
+                            <li>Backend i Node JS, 45 YH-poäng</li>
+                                9.Backend1 gif
+                                10.Backend2 gif
+
+                            <li>LIA 1, Webbutveckling, 60 YH-poäng</li>
+                                11. Valtab länk till Hemsidan + bild V
+                                12. Mailer projektet bilder bara V
+
+                            <li>Webbutveckling i CMS, 20 YH-poäng</li>
+                                13.CMS2 Hoster V
+                                14.Examens Arbetet Hoster V
+
+                            <li>LIA 2, Webbutveckling , 60 YH-poäng</li>
+                                15. Gif från aktie projektet V */} 
+
+
 
 {/* Kanske   boxShadow: 'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px', */} 
     {/* <section className="services" id="services" style={{backgroundColor: '#fff'}}>
@@ -1065,10 +1162,10 @@ window.addEventListener('scroll', changeBackground);
       {/* <!-- contact section start --> */}
     {/* <!-- teams section start --> */}
 
-    <section className="services" id="reference">
+    <section className="reference" id="reference">
         <div className="max-width">
             <h2 className="title">Min referens</h2>
-            <div className="serv-content">
+            <div className="ref-content">
                 <div className="card">
                     <div className="box">
                     <img id='referenceImg' src={ReferenceImg1} alt=""/>
@@ -1094,7 +1191,7 @@ window.addEventListener('scroll', changeBackground);
                           <span style={{color: "#F9A826" , fontSize: '45px', paddingRight: '50px'}} class="material-icons">call</span>
                           <div className="info">
                               <div className="head">Telefonnummer</div>
-                              <div className="sub-title">Inte tillgänglig</div>
+                              <div className="sub-title">0451 - 34 000</div>
                           </div>
                         </div>
                         </div>
@@ -1113,7 +1210,7 @@ window.addEventListener('scroll', changeBackground);
             <div className="contact-content">
                 <div className="column left">
                     <div className="text">Hör av Dig</div>
-                    <p>Om du är intresserad hör av dig via epost eller telefonsamtal .</p>
+                    <p>Om du är intresserad hör av dig via e-post eller telefonsamtal .</p>
                     <div className="icons">
                         <div className="row">
                         <span style={{color: "#F9A826" , fontSize: '45px'}} class="material-icons">person</span>
@@ -1156,7 +1253,7 @@ window.addEventListener('scroll', changeBackground);
     {/* <!-- footer section start --> */}
 
     <footer>
-        <span>© 2021 <a href="https://github.com/Martynas-ctrl">Martynas Majaras</a></span>
+        <span>© 2021 <a href="https://www.linkedin.com/in/martynas-majaras-781b681b3/" target="_blank">Martynas Majaras</a></span>
     </footer>
 
       </main>
