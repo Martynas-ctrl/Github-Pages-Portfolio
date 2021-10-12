@@ -293,9 +293,7 @@ window.addEventListener('scroll', changeBackground);
     <div>
       <header className="l-header">
         <Helmet>
-            <meta charSet="utf-8" />
             <title>Portfolio</title>
-            <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
     
 
